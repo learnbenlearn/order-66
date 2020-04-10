@@ -1,0 +1,3 @@
+<aura:component >
+    <img src="{!$Resource.order_66}"/>
+</aura:component>

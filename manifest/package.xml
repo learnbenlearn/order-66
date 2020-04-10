@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>empireForeverController</members>
+        <name>ApexClass</name>
+    </types>
+    
+    <types>
+        <members>sithTable</members>
+        <members>homePageContainer</members>
+        <members>order66PicComponent</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    
+    <types>
+        <members>empire_logo</members>
+        <name>ContentAsset</name>
+    </types>
+    
+    <types>
         <members>Order_66</members>
         <name>CustomApplication</name>
     </types>
@@ -18,6 +35,7 @@
     </types>
 
     <types>
+        <members>MyFolder</members>
         <members>MyFolder/jedi_logo</members>
         <name>Document</name>
     </types>
@@ -35,6 +53,12 @@
         <members>BountyHunter</members>
         <members>LordVader</members>
         <name>Profile</name>
+    </types>
+
+    <types>
+        <members>order_66_audio</members>
+        <members>order_66</members>
+        <name>StaticResource</name>
     </types>
     <version>47.0</version>
 </Package>
