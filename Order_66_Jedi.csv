@@ -1,0 +1,20 @@
+﻿Name,Planet__c,Number_of_Hands__c,Lightsaber_Color__c,Rank__c,Eliminated__c,Race__c,Gender__c
+Aayla Secura,Felucia,2,Blue,Jedi Master,TRUE,Twi'lek,Female
+Agen Kolar,Coruscant,2,Green,Jedi Master,TRUE,Zabrak,Male
+Ahsoka Tano,,2,Green,Padawan,,Togruta,Female
+Anakin Skywalker,Coruscant,1,Blue,Jedi Knight,TRUE,Human,Male
+Depa Billaba,Kaller,2,,Jedi Master,TRUE,Human,Female
+Jocasta Nu,Coruscant,2,Blue,Jedi Master,,Human,Female
+Ki-Adi-Mundi,Mygeeto,2,Blue,Jedi Master,TRUE,Cerean,Male
+Kit Fisto,Coruscant,2,Green,Jedi Master,TRUE,Nautolan,Male
+Luminara Unduli,Kashyyyk,2,Green,Jedi Master,,Miralan,Female
+Mace Windu,Coruscant,0,Purple,Jedi Master,TRUE,Human,Male
+Mara Jade,,2,,Jedi Master,,Human,Female
+Obi-Wan Kenobi,,2,Blue,Jedi Master,,Human,Male
+Plo Koon,Cato Neimoidia,2,Blue,Jedi Master,TRUE,Kel Dor,Male
+Saesee Tiin,Coruscant,2,Green,Jedi Master,TRUE,Iktotchi,Male
+Shaak Ti,Coruscant,2,Blue,Jedi Master,TRUE,Togruta,Female
+Sors Bandeam,Coruscant,2,,Youngling,TRUE,Human,Male
+Stass Allie,Saleucami,2,Green,Jedi Master,TRUE,Tholothian,Female
+Yoda,,2,Green,Jedi Master,,,Male
+Zett Jukassa,Coruscant,2,Blue,Padawan,TRUE,Human,Male

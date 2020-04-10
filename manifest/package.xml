@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Order_66</members>
+        <name>CustomApplication</name>
+    </types>
+    
+    <types>
+        <members>Jedi__c</members>
+        <members>Planet__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <types>
+        <members>Jedi__c</members>
+        <members>Planet__c</members>
+        <name>CustomTab</name>
+    </types>
+
+    <types>
+        <members>MyFolder/jedi_logo</members>
+        <name>Document</name>
+    </types>
+
+    <types>
+        <members>Bounty_Hunter_Home_Page</members>
+        <members>Order_66_Home_Page</members>
+        <members>Vader_Home_Page</members>
+        <members>Order_66_UtilityBar</members>
+        <name>FlexiPage</name>
+    </types>
+
+    <types>
+        <members>Admin</members>
+        <members>BountyHunter</members>
+        <members>LordVader</members>
+        <name>Profile</name>
+    </types>
+    <version>47.0</version>
+</Package>
