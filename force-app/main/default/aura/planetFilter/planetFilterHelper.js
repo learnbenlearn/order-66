@@ -7,5 +7,11 @@
             }
         });
         $A.enqueueAction(retrievePlanets);
-	}
+	},
+    
+    fireChangeEvt : function(component){
+        var planetSelect = component.getEvent("planetChange");
+        planetSelect.setParams({"filterValue": component.get("v.chosenPlanet")});
+        planetSelect.fire();
+    }
 })

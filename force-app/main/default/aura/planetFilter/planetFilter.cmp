@@ -2,6 +2,8 @@
     <aura:attribute name="planetOptions" type="String[]"/>
     <aura:attribute name="chosenPlanet" type="String"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.chosenPlanet}" action="{!c.fireChangeEvt}"/>
+    <aura:registerEvent name="planetChange" type="c:filterSelect"/>
     
     <lightning:select label="Planet" value="{!v.chosenPlanet}">
         <option value="">Select a planet...</option>

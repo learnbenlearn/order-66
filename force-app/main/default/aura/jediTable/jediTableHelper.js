@@ -4,7 +4,7 @@
         retrieveData.setCallback(this, function(response){
             if(response.getState() === "SUCCESS"){
                 var jediData = response.getReturnValue();
-                
+
                 // <lighting:dataTable does not like grabbing values from a parent object, so this is a
                 // workaround
                 for(let i = 0; i < jediData.length; i++){
@@ -22,56 +22,73 @@
         $A.enqueueAction(retrieveData);
     },
     
-    handleChangeRank : function (component, event){ 
-        var oldRank = event.getParam("oldValue");
-        var newRank = event.getParam("value");
-        var newData = [];
-        if(oldRank == ""){
-            var data = component.get("v.data");
-            for(let i = 0; i < data.length; i++){
-                if(data[i].Rank__c == newRank){
-                    newData.push(data[i]);
-                }
+    handleChangeRank : function (component, event){
+        var newData = component.get("v.masterData");
+        newData = this.filterRank(newData, event.getParam("value"));
+        newData = this.filterPlanet(newData, component.get("v.selectedPlanet"));
+        newData = this.filterEliminated(newData, component.get("v.selectedEliminated"));
+        component.set("v.data", newData);
+    },
+    
+    handleChangePlanet : function (component, event){
+        var newData = component.get("v.masterData");
+        newData = this.filterRank(newData, component.get("v.selectedRank"));
+        newData = this.filterPlanet(newData, event.getParam("value"));
+        newData = this.filterEliminated(newData, component.get("v.selectedEliminated"));
+        component.set("v.data", newData);
+    },
+    
+    handleChangeEliminated: function (component, event){
+        var newData = component.get("v.masterData");
+        newData = this.filterRank(newData, component.get("v.selectedRank"));
+        newData = this.filterPlanet(newData, component.get("v.selectedPlanet"));
+        newData = this.filterEliminated(newData, event.getParam("value"));
+        component.set("v.data", newData);
+    },
+    
+    filterRank : function(data, rank){
+        if(rank == ""){
+            return data;
+        }
+        var filteredData = [];
+        for(let i = 0; i < data.length; i++){
+            if(data[i].Rank__c == rank){
+                filteredData.push(data[i]);
             }
+        }
+        return filteredData;
+    },
+    
+    filterPlanet : function(data, planet){
+        if(planet == ""){
+            return data;
+        }
+        var filteredData = [];
+        for(let i = 0; i < data.length; i++){
+            if(data[i].PlanetName == planet){
+                filteredData.push(data[i]);
+            }
+        }
+        return filteredData;
+    },
+    
+    filterEliminated : function(data, eliminated){
+        var isEliminated;
+        if(eliminated == ""){
+            return data;
+        }
+        else if(eliminated == "True"){
+            isEliminated = true;
         }
         else{
-            var masterData = component.get("v.masterData");
-            var planet = component.get("v.selectedPlanet");
-            var eliminated = component.get("v.selectedEliminated");
-            var newData = [];
-            if(newRank == ""){
-                for(let i = 0; i < masterData.length; i++){
-                    if(planet == "" && eliminated == ""){
-                        newData.push(masterData[i]);
-                    }
-                    else if(planet == "" && masterData[i].Eliminated__c == eliminated){
-                        newData.push(masterData[i]);
-                    }
-                    else if(eliminated == "" && masterData[i].Planet__c == planet){
-                        newData.push(masterData[i]);
-                    }
-                    else if(masterData[i].Planet__c == planet && masterData[i].Eliminated__c == eliminated){
-                        newData.push(masterData[i]);
-                    }
-                }
-            }
-            else{
-                for(let i = 0; i < masterData.length; i++){
-                    if(planet == "" && eliminated == "" && masterData[i].Rank__c == newRank){
-                        newData.push(masterData[i]);
-                    }
-                    else if(planet == masterData[i].Planet__c && eliminated == "" && masterData[i].Rank__c == newRank){
-                        newData.push(masterData[i]);
-                    }
-                    else if(planet == "" && eliminated == masterData[i].Eliminated__c && masterData.Rank__c == newRank){
-                        newData.push(masterData[i]);
-                    }
-                    else if(planet == masterData[i].Planet__c && eliminated == masterData[i].Eliminated__c && masterData.Rank__c == newRank){
-                        newData.push(masterData[i]);
-                    }
-                }
+            isEliminated = false;
+        }
+        var filteredData = [];
+        for(let i = 0; i < data.length; i++){
+            if(data[i].Eliminated__c == isEliminated){
+                filteredData.push(data[i]);
             }
         }
-        component.set("v.data", newData);
+        return filteredData;
     }
 })

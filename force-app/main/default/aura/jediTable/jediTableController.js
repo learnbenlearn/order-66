@@ -13,5 +13,13 @@
     
    	handleChangeRank: function (component, event, helper){
         helper.handleChangeRank(component, event);
+    },
+    
+    handleChangePlanet: function (component, event, helper){
+        helper.handleChangePlanet(component, event);
+    },
+    
+    handleChangeEliminated: function (component, event, helper){
+        helper.handleChangeEliminated(component, event);
     }
 })
