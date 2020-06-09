@@ -1,0 +1,12 @@
+<aura:component controller="empireForeverController">
+    <aura:attribute name="planetOptions" type="String[]"/>
+    <aura:attribute name="chosenPlanet" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:select label="Planet" value="{!v.chosenPlanet}">
+        <option value="">Select a planet...</option>
+        <aura:iteration items="{!v.planetOptions}" var="planet">
+        	<option value="{!planet}">{!planet}</option>
+        </aura:iteration>
+    </lightning:select>
+</aura:component>

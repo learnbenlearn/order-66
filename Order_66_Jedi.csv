@@ -1,4 +1,4 @@
-﻿Name,Planet__c,Number_of_Hands__c,Lightsaber_Color__c,Rank__c,Eliminated__c,Race__c,Gender__c
+﻿Name,Planet Name,Number_of_Hands__c,Lightsaber_Color__c,Rank__c,Eliminated__c,Race__c,Gender__c
 Aayla Secura,Felucia,2,Blue,Jedi Master,TRUE,Twi'lek,Female
 Agen Kolar,Coruscant,2,Green,Jedi Master,TRUE,Zabrak,Male
 Ahsoka Tano,,2,Green,Padawan,,Togruta,Female

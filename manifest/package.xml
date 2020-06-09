@@ -6,9 +6,15 @@
     </types>
     
     <types>
-        <members>sithTable</members>
         <members>homePageContainer</members>
-        <members>order66PicComponent</members>
+        <members>eliminatedFilter</members>
+        <members>filterSelect</members>
+        <members>jediDataOverview</members>
+        <members>jediFilters</members>
+        <members>jediTable</members>
+        <members>order66Pic</members>
+        <members>planetFilter</members>
+        <members>rankFilter</members>
         <name>AuraDefinitionBundle</name>
     </types>
     
@@ -60,5 +66,5 @@
         <members>order_66</members>
         <name>StaticResource</name>
     </types>
-    <version>47.0</version>
+    <version>48.0</version>
 </Package>

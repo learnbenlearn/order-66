@@ -1,0 +1,21 @@
+<aura:component controller="empireForeverController">
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="masterData" type="Object"/>
+    <aura:attribute name="selectedRank" type="String" default=""/>
+    <aura:attribute name="selectedEliminated" type="String" default=""/>
+    <aura:attribute name="selectedPlanet" type="String" default=""/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.selectedRank}" action="{!c.handleChangeRank}"/>
+    <aura:handler name="change" value="{!v.selectedEliminated}" 
+                  action="{!c.handleChangeEliminated}"/>
+    <aura:handler name="change" value="{!v.selectedPlanet}" action="{!c.handleChangePlanet}"/>
+
+    <div style="height: 300px">
+        <lightning:datatable
+                keyField="id"
+                data="{!v.data}"
+                columns="{!v.columns}"
+                hideCheckboxColumn="true"/>
+    </div>
+</aura:component>

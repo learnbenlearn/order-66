@@ -1,0 +1,9 @@
+<aura:component>
+    <aura:attribute name="rank" type="String" default=""/>
+    <aura:attribute name="eliminated" type="String" default=""/>
+    <aura:attribute name="planet" type="String" default=""/>
+    <aura:handler name="rankChange" event="c:filterSelect" action="{!c.handleRankChange}"/>
+    <c:jediFilters/>
+    <c:jediTable selectedRank="{!v.rank}" selectedEliminated="{!v.eliminated}" 
+                 selectedPlanet="{!v.planet}"/>
+</aura:component>

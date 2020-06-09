@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="eliminated" type="Boolean"/>
+    <aura:attribute name="chosenEliminated" type="String"/>
+    
+    <lightning:select label="Eliminated" value="{!v.chosenElminated}">
+        <option value="">Select an option...</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </lightning:select>
+</aura:component>

@@ -4,6 +4,6 @@
 	<aura:if isTrue="{!v.soundRenderer}">
         <audio src="{!$Resource.order_66_audio}" autoplay="true"/>
     </aura:if>
-    <c:order66PicComponent/>
-    <c:sithTable/>
+    <c:order66Pic/>
+    <c:jediDataOverview/>
 </aura:component>
