@@ -1,5 +1,5 @@
 ({
-    populateTable : function(component) {
+    populateTable : function(component, initial) {
         var retrieveData = component.get('c.getJedi');
         retrieveData.setCallback(this, function(response){
             if(response.getState() === "SUCCESS"){
@@ -15,11 +15,19 @@
                         jediData[i].PlanetName = jediData[i].Planet__r.Name;
                     }
                 }
-                component.set('v.data', jediData);
+                if(initial) component.set('v.data', jediData);
                 component.set('v.masterData', jediData);
             } 
         });
         $A.enqueueAction(retrieveData);
+    },
+    
+    handleChangeMasterData : function(component){
+        var newData = component.get("v.masterData");
+        newData = this.filterRank(newData, component.get("v.selectedRank"));
+        newData = this.filterPlanet(newData, component.get("v.selectedPlanet"));
+        newData = this.filterEliminated(newData, component.get("v.selectedEliminated"));
+        component.set("v.data", newData);
     },
     
     handleChangeRank : function (component, event){

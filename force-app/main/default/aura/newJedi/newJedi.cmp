@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:registerEvent name="jediCreatedEvt" type="c:jediCreated"/>
+    <aura:attribute name="fields" type="String[]" default="['Name', 'Rank__c', 'Race__c', 'Planet__c',
+                                                           'Number_of_Hands__c', 'Gender__c', 'Eliminated__c']"/>
+    <lightning:recordForm objectApiName="Jedi__c" fields="{!v.fields}" mode="edit"
+                          onsuccess="{!c.handleSuccess}"/>
+</aura:component>

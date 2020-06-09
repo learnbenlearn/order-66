@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name="fields" type="String[]" default="['Name']"/>
+	<lightning:recordForm objectApiName="Planet__c" fields="{!v.fields}" mode="edit"
+                          onsuccess="{!c.handleSuccess}"/>
+</aura:component>

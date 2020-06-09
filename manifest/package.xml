@@ -9,9 +9,12 @@
         <members>homePageContainer</members>
         <members>eliminatedFilter</members>
         <members>filterSelect</members>
+        <members>jediCreated</members>
         <members>jediDataOverview</members>
         <members>jediFilters</members>
         <members>jediTable</members>
+        <members>newJedi</members>
+        <members>newPlanet</members>
         <members>order66Pic</members>
         <members>planetFilter</members>
         <members>rankFilter</members>

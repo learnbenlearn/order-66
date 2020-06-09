@@ -6,4 +6,6 @@
     </aura:if>
     <c:order66Pic/>
     <c:jediDataOverview/>
+    <c:newPlanet/>
+    <c:newJedi/>
 </aura:component>

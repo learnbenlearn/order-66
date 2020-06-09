@@ -10,6 +10,8 @@
     <aura:handler name="change" value="{!v.selectedEliminated}" 
                   action="{!c.handleChangeEliminated}"/>
     <aura:handler name="change" value="{!v.selectedPlanet}" action="{!c.handleChangePlanet}"/>
+    <aura:handler event="c:jediCreated" action="{!c.handleJediCreated}"/>
+    <aura:handler name="change" value="{!v.masterData}" action="{!c.handleChangeMasterData}"/>
 
     <div style="height: 300px">
         <lightning:datatable

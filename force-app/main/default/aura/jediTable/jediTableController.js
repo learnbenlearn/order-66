@@ -8,7 +8,7 @@
             {label: 'Number of Hands', fieldName: 'Number_of_Hands__c', type: 'number'},
             {label: 'Eliminated', fieldName: 'Eliminated__c', type: 'boolean'},
             {label: 'Rank', fieldName: 'Rank__c', type: 'text'}]);
-        helper.populateTable(component);
+        helper.populateTable(component, false);
     },
     
    	handleChangeRank: function (component, event, helper){
@@ -21,5 +21,13 @@
     
     handleChangeEliminated: function (component, event, helper){
         helper.handleChangeEliminated(component, event);
+    },
+    
+    handleJediCreated: function (component, event, helper){
+        helper.populateTable(component, false);
+    },
+    
+    handleChangeMasterData: function (component, event, helper){
+        helper.handleChangeMasterData(component);
     }
 })
