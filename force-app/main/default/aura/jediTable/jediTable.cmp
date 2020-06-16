@@ -13,7 +13,10 @@
     <aura:handler event="c:jediCreated" action="{!c.handleJediCreated}"/>
     <aura:handler name="change" value="{!v.masterData}" action="{!c.handleChangeMasterData}"/>
     <aura:registerEvent name="jediSelectEvt" type="c:jediSelected"/>
+    <aura:registerEvent name="filterResetEvt" type="c:filterReset"/>
     
+    <lightning:button label="Reset Filters" onclick="{!c.resetFilters}"/>
+    <br/><br/>
     <div style="height: 300px">
         <lightning:datatable
                 aura:id="jediTable" keyField="id" data="{!v.data}" columns="{!v.columns}"

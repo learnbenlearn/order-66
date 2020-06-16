@@ -1,5 +1,8 @@
 <aura:component>
-    <c:planetFilter/>
-    <c:rankFilter/>
-    <c:eliminatedFilter/>
+    <aura:attribute name="planet" type="String"/>
+    <aura:attribute name="rank" type="String"/>
+    <aura:attribute name="eliminated" type="String"/>
+    <c:planetFilter chosenPlanet="{!v.planet}"/>
+    <c:rankFilter chosenRank="{!v.rank}"/>
+    <c:eliminatedFilter chosenEliminated="{!v.eliminated}"/>
 </aura:component>

@@ -11,6 +11,7 @@
         <members>eliminatedFilter</members>
         <members>executeOrder66</members>
         <members>filterSelect</members>
+        <members>filterReset</members>
         <members>jediCreated</members>
         <members>jediDataOverview</members>
         <members>jediFilters</members>

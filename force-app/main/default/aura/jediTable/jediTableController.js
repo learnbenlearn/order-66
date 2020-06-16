@@ -25,5 +25,9 @@
     
     fireJediSelected : function(component, event, helper){
         helper.fireJediSelected(component);
+    },
+    
+    resetFilters : function(component, event, helper){
+        helper.resetFilters(component);
     }
 })

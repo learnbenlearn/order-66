@@ -10,4 +10,8 @@
     handlePlanetChange : function(component, event, helper) {
 		helper.handlePlanetChange(component, event);
 	},
+    
+    handleFilterReset : function(component, event, helper){
+        helper.handleFilterReset(component);
+    }
 })

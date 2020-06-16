@@ -137,5 +137,10 @@
         if(data.indexOf(component.find("jediTable").getSelectedRows()[0] == -1)){
             component.find("jediTable").set("v.selectedRows", "");
         }
+    },
+    
+    resetFilters : function(component){
+        component.getEvent("filterResetEvt").fire();
+        component.set("v.data", component.get("v.masterData"));
     }
 })
