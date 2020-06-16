@@ -6,8 +6,10 @@
     </types>
     
     <types>
+        <members>assignmentBox</members>
         <members>homePageContainer</members>
         <members>eliminatedFilter</members>
+        <members>executeOrder66</members>
         <members>filterSelect</members>
         <members>jediCreated</members>
         <members>jediDataOverview</members>
@@ -20,7 +22,7 @@
         <members>rankFilter</members>
         <name>AuraDefinitionBundle</name>
     </types>
-    
+
     <types>
         <members>empire_logo</members>
         <name>ContentAsset</name>

@@ -1,5 +1,5 @@
 ({
-	onRender : function(component, event, helper) {
-        component.set("v.soundRenderer", "true");
-	}
+	handleJediSelect : function(component, event, helper){
+        helper.handleJediSelect(component, event);
+    }
 })

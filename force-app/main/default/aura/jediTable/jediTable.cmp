@@ -12,12 +12,11 @@
     <aura:handler name="change" value="{!v.selectedPlanet}" action="{!c.handleChangePlanet}"/>
     <aura:handler event="c:jediCreated" action="{!c.handleJediCreated}"/>
     <aura:handler name="change" value="{!v.masterData}" action="{!c.handleChangeMasterData}"/>
-
+    <aura:registerEvent name="jediSelectEvt" type="c:jediSelected"/>
+    
     <div style="height: 300px">
         <lightning:datatable
-                keyField="id"
-                data="{!v.data}"
-                columns="{!v.columns}"
-                hideCheckboxColumn="true"/>
+                aura:id="jediTable" keyField="id" data="{!v.data}" columns="{!v.columns}"
+                maxRowSelection="1" onrowselection="{!c.fireJediSelected}"/>
     </div>
 </aura:component>

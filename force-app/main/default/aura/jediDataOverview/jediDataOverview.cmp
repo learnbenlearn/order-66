@@ -5,7 +5,9 @@
     <aura:handler name="rankChange" event="c:filterSelect" action="{!c.handleRankChange}"/>
     <aura:handler name="eliminatedChange" event="c:filterSelect" action="{!c.handleEliminatedChange}"/>
     <aura:handler name="planetChange" event="c:filterSelect" action="{!c.handlePlanetChange}"/>
-    <c:jediFilters/>
-    <c:jediTable selectedRank="{!v.rank}" selectedEliminated="{!v.eliminated}" 
-                 selectedPlanet="{!v.planet}"/>
+    <div class="slds-p-around_medium">
+        <c:jediFilters/>
+        <c:jediTable selectedRank="{!v.rank}" selectedEliminated="{!v.eliminated}" 
+                     selectedPlanet="{!v.planet}"/>
+    </div>
 </aura:component>

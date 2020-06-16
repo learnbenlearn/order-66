@@ -1,11 +1,24 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
-    <aura:handler name="render" value="{!this}" action="{!c.onRender}"/>
-    <aura:attribute name="soundRenderer" type="Boolean" default="{!false}"/>
-	<aura:if isTrue="{!v.soundRenderer}">
-        <audio src="{!$Resource.order_66_audio}" autoplay="true"/>
-    </aura:if>
-    <c:order66Pic/>
-    <c:jediDataOverview/>
-    <c:newPlanet/>
-    <c:newJedi/>
+    <aura:handler name="jediSelectEvt" event="c:jediSelected" action="{!c.handleJediSelect}"/>
+    <aura:attribute name="chosenJedi" type="String" default=""/>
+    <aura:attribute name="showAssigned" type="Boolean" default="false"/>
+    
+    <div class="slds-grid slds-wrap slds-gutters">
+        <div class="slds-col slds-size_9-of-12">
+            <lightning:tabset >
+                <lightning:tab label="Jedi Table"><c:jediDataOverview/></lightning:tab>
+                <lightning:tab label="Create New Planet"><c:newPlanet/></lightning:tab>
+                <lightning:tab label="Create New Jedi"><c:newJedi/></lightning:tab>
+            </lightning:tabset>
+        </div>
+        <div class="slds-col slds-size_3-of-12">
+            <c:order66Pic/>
+            <br/><br/>
+            <c:executeOrder66/>
+            <br/><br/>
+            <aura:if isTrue="{!v.showAssigned}">
+                <c:assignmentBox selectedJedi="{!v.chosenJedi}"/>
+            </aura:if>
+        </div>
+    </div>
 </aura:component>

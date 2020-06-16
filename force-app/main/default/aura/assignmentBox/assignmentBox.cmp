@@ -1,0 +1,43 @@
+<aura:component controller="empireForeverController">
+    <aura:attribute name="selectedJedi" type="String"/>
+    <aura:attribute name="displayedJedi" type="Jedi__c"/>
+    <aura:attribute name="userList" type="String[]"/>
+    <aura:attribute name="chosenUser" type="String"/>
+    <aura:attribute name="toggle" type="Boolean" default="false"/>
+    <aura:attribute name="fields" type="String[]" default="['Name', 'Planet__r.Name', 'Gender__c', 
+                                                           'Race__c', 'Rank__c', 
+                                                           'Assigned_To__c']"/>
+    <aura:handler name="init" value="{!this}" action="{!c.getEligibleUsers}"/>
+    <aura:handler name="change" value="{!v.selectedJedi}" action="{!c.handleChange}"/>
+    
+    <force:recordData aura:id="recordData" recordId="{!v.selectedJedi}" fields="{!v.fields}" 
+                      targetFields="{!v.displayedJedi}"/>
+    
+    <lightning:card>
+        <div class="slds-p-around_small">
+            <div class="slds-text-heading_large">{!v.displayedJedi.Name}</div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2">
+                    Planet: 
+                    <lightning:formattedText value="{!v.displayedJedi.Planet__r.Name}"/>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    Gender: <lightning:formattedText value="{!v.displayedJedi.Gender__c}"/>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    Race: <lightning:formattedText value="{!v.displayedJedi.Race__c}"/>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    Rank: <lightning:formattedText value="{!v.displayedJedi.Rank__c}"/>
+                </div>
+            </div>
+            <lightning:select value="{!v.chosenUser}">
+                <option value="">Assign to...</option>
+                <aura:iteration items="{!v.userList}" var="userName">
+                    <option value="{!userName}">{!userName}</option>
+                </aura:iteration>
+            </lightning:select>
+            <lightning:button label="Save" onclick="{!c.saveAssignment}"/>
+        </div>
+    </lightning:card>
+</aura:component>
