@@ -6,7 +6,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>empireForeverController</apexClass>
+        <apexClass>Order66Controller</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>

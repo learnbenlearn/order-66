@@ -1,4 +1,4 @@
-<aura:component controller="empireForeverController">
+<aura:component controller="Order66Controller">
     <aura:attribute name="data" type="Object"/>
     <aura:attribute name="columns" type="List"/>
     <aura:attribute name="masterData" type="Object"/>

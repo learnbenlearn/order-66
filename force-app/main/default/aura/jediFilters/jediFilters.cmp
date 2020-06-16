@@ -1,4 +1,4 @@
-<aura:component controller="empireForeverController">
+<aura:component>
     <c:planetFilter/>
     <c:rankFilter/>
     <c:eliminatedFilter/>
