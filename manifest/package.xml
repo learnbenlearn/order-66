@@ -15,6 +15,7 @@
         <members>jediCreated</members>
         <members>jediDataOverview</members>
         <members>jediFilters</members>
+        <members>jediSelected</members>
         <members>jediTable</members>
         <members>newJedi</members>
         <members>newPlanet</members>
