@@ -68,6 +68,11 @@
     </types>
 
     <types>
+        <members>Security</members>
+        <name>Settings</name>
+    </types>
+    
+    <types>
         <members>order_66_audio</members>
         <members>order_66</members>
         <name>StaticResource</name>
