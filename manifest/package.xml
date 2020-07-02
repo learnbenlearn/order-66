@@ -56,7 +56,6 @@
 
     <types>
         <members>Bounty_Hunter_Home_Page</members>
-        <members>Jedi_Record_Page</members>
         <members>Order_66_Home_Page</members>
         <members>Vader_Home_Page</members>
         <members>Order_66_UtilityBar</members>
