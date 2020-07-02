@@ -22,6 +22,7 @@
         <members>order66Pic</members>
         <members>planetFilter</members>
         <members>rankFilter</members>
+        <members>vaderHomePageContainer</members>
         <name>AuraDefinitionBundle</name>
     </types>
 
