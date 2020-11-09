@@ -22,7 +22,6 @@
         <members>order66Pic</members>
         <members>planetFilter</members>
         <members>rankFilter</members>
-        <members>vaderHomePageContainer</members>
         <name>AuraDefinitionBundle</name>
     </types>
 
@@ -57,7 +56,6 @@
     <types>
         <members>Bounty_Hunter_Home_Page</members>
         <members>Order_66_Home_Page</members>
-        <members>Vader_Home_Page</members>
         <members>Order_66_UtilityBar</members>
         <name>FlexiPage</name>
     </types>

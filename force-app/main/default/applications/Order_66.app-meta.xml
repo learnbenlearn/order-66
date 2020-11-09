@@ -22,14 +22,6 @@
     <navType>Standard</navType>
     <profileActionOverrides>
         <actionName>Tab</actionName>
-        <content>Vader_Home_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>LordVader</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
         <content>Bounty_Hunter_Home_Page</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>standard-home</pageOrSobjectType>
