@@ -1,3 +1,4 @@
 <aura:event type="COMPONENT">
     <aura:attribute name="filterValue" type="String"/>
+    <aura:attribute name="filterType" type="String"/>
 </aura:event>

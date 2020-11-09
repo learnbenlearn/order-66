@@ -2,9 +2,7 @@
     <aura:attribute name="rank" type="String" default=""/>
     <aura:attribute name="eliminated" type="String" default=""/>
     <aura:attribute name="planet" type="String" default=""/>
-    <aura:handler name="rankChange" event="c:filterSelect" action="{!c.handleRankChange}"/>
-    <aura:handler name="eliminatedChange" event="c:filterSelect" action="{!c.handleEliminatedChange}"/>
-    <aura:handler name="planetChange" event="c:filterSelect" action="{!c.handlePlanetChange}"/>
+    <aura:handler name="filterChange" event="c:filterSelect" action="{!c.handleFilterChange}"/>
     <aura:handler name="filterResetEvt" event="c:filterReset" action="{!c.handleFilterReset}"/>
     <div class="slds-p-around_medium">
         <c:jediFilters rank="{!v.rank}" eliminated="{!v.eliminated}" planet="{!v.planet}"/>

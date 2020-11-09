@@ -1,0 +1,13 @@
+<aura:component controller="Order66Controller">
+    <aura:attribute name="chosenOption" type="String"/>
+    <aura:attribute name="whatFilter" type="String"/>
+    <aura:handler name="change" value="{!v.chosenOption}" action="{!c.fireChangeEvt}"/>
+    <aura:registerEvent name="filterChange" type="c:filterSelect"/>
+    
+    <lightning:select label="{!v.whatFilter}" value="{!v.chosenOption}">
+        <option value="">Select an option...</option>
+        <aura:iteration items="{!v.options}" var="option">
+            <option value="{!option}">{!option}</option>
+        </aura:iteration>
+    </lightning:select>
+</aura:component>

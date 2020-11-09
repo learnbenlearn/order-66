@@ -8,8 +8,8 @@
     <types>
         <members>assignmentBox</members>
         <members>homePageContainer</members>
-        <members>eliminatedFilter</members>
         <members>executeOrder66</members>
+        <members>filter</members>
         <members>filterSelect</members>
         <members>filterReset</members>
         <members>jediCreated</members>
@@ -20,8 +20,6 @@
         <members>newJedi</members>
         <members>newPlanet</members>
         <members>order66Pic</members>
-        <members>planetFilter</members>
-        <members>rankFilter</members>
         <name>AuraDefinitionBundle</name>
     </types>
 
