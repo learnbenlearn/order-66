@@ -1,10 +1,7 @@
 ({
     populateEliminated : function(component) {
-        let options = [
-            {value: "True", label: "True"},
-            {value: "False", label:"False"}
-        ]
-        component.set("v.options", options);
+        let opts = ["True", "False"];
+        component.set("v.options", opts);
     },
     
     populatePlanets : function(component) {

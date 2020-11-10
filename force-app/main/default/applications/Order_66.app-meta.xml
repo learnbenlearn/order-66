@@ -20,14 +20,6 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Order 66</label>
     <navType>Standard</navType>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>Bounty_Hunter_Home_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>BountyHunter</profile>
-    </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>Jedi__c</tabs>
     <tabs>Planet__c</tabs>

@@ -52,7 +52,6 @@
     </types>
 
     <types>
-        <members>Bounty_Hunter_Home_Page</members>
         <members>Order_66_Home_Page</members>
         <members>Order_66_UtilityBar</members>
         <name>FlexiPage</name>
@@ -75,5 +74,5 @@
         <members>order_66</members>
         <name>StaticResource</name>
     </types>
-    <version>48.0</version>
+    <version>50.0</version>
 </Package>

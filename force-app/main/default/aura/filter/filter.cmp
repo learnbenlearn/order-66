@@ -1,6 +1,8 @@
 <aura:component controller="Order66Controller">
+    <aura:attribute name="options" type="String[]"/>
     <aura:attribute name="chosenOption" type="String"/>
     <aura:attribute name="whatFilter" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:handler name="change" value="{!v.chosenOption}" action="{!c.fireChangeEvt}"/>
     <aura:registerEvent name="filterChange" type="c:filterSelect"/>
     
